@@ -1,0 +1,27 @@
+@use "normalize" as *;
+@use "fonts" as *;
+@use "variables" as *;
+@use "utils" as *;
+@use "globals" as *;
+@use "./blocks/header" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  width: 1920px;
+  height: 370px;
+  opacity: 1;
+
+  z-index: 0;
+}
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

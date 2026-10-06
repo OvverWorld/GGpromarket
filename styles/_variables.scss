@@ -1,0 +1,21 @@
+@use "helpers" as *;
+
+:root {
+  --gradient: linear-gradient(265.23deg, #237249 6.79%, #35C66B 97.2%);
+
+  --dark-button: #121517;
+
+  --color-white: linear-gradient(
+          264.52deg,
+          #FFFFFF 4.95%,
+          #E5E5E5 64.19%,
+          #FBFBFB 88.37%
+  );
+
+  --footer-dark: #0B0C0D;
+
+  --container-width: #{rem(1512)};
+  --container-padding-x: #{rem(428)};
+
+  --transition-duration: 0.2s;
+}

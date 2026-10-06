@@ -1,0 +1,102 @@
+/* =========================
+   BOX MODEL RESET
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =========================
+   RESET MARGINS
+========================= */
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+ul, ol,
+figure,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   LISTS
+========================= */
+ul, ol {
+  list-style: none;
+}
+
+/* =========================
+   IMAGES / MEDIA
+========================= */
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================
+   FORMS
+========================= */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+/* =========================
+   HTML / BODY BASE
+========================= */
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================
+   TABLES
+========================= */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

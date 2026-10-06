@@ -1,0 +1,462 @@
+/* =========================
+   BOX MODEL RESET
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =========================
+   RESET MARGINS
+========================= */
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+ul, ol,
+figure,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   LISTS
+========================= */
+ul, ol {
+  list-style: none;
+}
+
+/* =========================
+   IMAGES / MEDIA
+========================= */
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================
+   FORMS
+========================= */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+/* =========================
+   HTML / BODY BASE
+========================= */
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================
+   TABLES
+========================= */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --gradient: linear-gradient(265.23deg, #237249 6.79%, #35C66B 97.2%);
+  --dark-button: #121517;
+  --color-white: linear-gradient(
+          264.52deg,
+          #FFFFFF 4.95%,
+          #E5E5E5 64.19%,
+          #FBFBFB 88.37%
+  );
+  --footer-dark: #0B0C0D;
+  --container-width: 94.5rem;
+  --container-padding-x: 26.75rem;
+  --transition-duration: 0.2s;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@media (width <= 48.06125rem) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (width > 48.06125rem) {
+  .visible-mobile {
+    display: none !important;
+  }
+}
+
+body {
+  font-size: clamp(0.875rem, 0.7884615385rem + 0.3846153846vw, 1.125rem);
+  font-family: var(--font-family-base);
+}
+
+.header {
+  width: 100%;
+  background-color: #E1EEFB;
+  height: 35vh;
+  padding: 3.4rem 0;
+}
+.header__inner {
+  max-width: 1200px;
+  padding: 0 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5rem;
+  margin-left: 5rem;
+}
+.header__logo {
+  margin-right: auto;
+  flex: 0 0 auto;
+}
+.header__logo img {
+  width: 20rem;
+  height: auto;
+}
+.header__tittle {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  flex-wrap: nowrap;
+}
+.header__location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 2rem;
+}
+.header__location h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 1.5rem;
+  border-bottom: 0.15rem dashed #2B7BC6;
+  color: #2B7BC6;
+}
+.header__location img {
+  width: 1rem;
+  height: 1.1rem;
+}
+.header__contact {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  white-space: nowrap;
+}
+.header__contact h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #000;
+}
+.header__phone {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.header__phone button {
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2B7BC6;
+  border-bottom: 0.15rem dashed #2B7BC6;
+  cursor: pointer;
+}
+.header__phone img {
+  width: 1.4rem;
+  height: 1.2rem;
+}
+.header__nav-bar {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: 4rem;
+}
+.header__nav-bar a {
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-family: "Montserrat", sans-serif;
+  color: #2B7BC6;
+}
+.header__search {
+  margin-top: 1.5rem;
+  margin-left: 10.1rem;
+}
+.header__subtittle {
+  display: flex;
+  align-items: center;
+}
+.header__catalog {
+  display: flex;
+  align-items: center;
+  background-color: #004C93;
+  width: 17rem;
+  height: 4.2rem;
+  white-space: nowrap;
+  padding: 0 2.7rem;
+  gap: 1.5rem;
+}
+.header__catalog img {
+  width: 1.9rem;
+  height: auto;
+}
+.header__catalog h1 {
+  font-size: 1rem;
+  color: #FBFAF9;
+  font-weight: 600;
+}
+.header__cheps {
+  display: flex;
+  align-items: center;
+  background: #1061AB;
+  width: 8rem;
+  height: 4.2rem;
+  padding: 0 2.1rem;
+}
+.header__cheps h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #FBFAF9;
+}
+.header__brands {
+  display: flex;
+  align-items: center;
+  background: #2B7BC6;
+  width: 9rem;
+  height: 4.2rem;
+  padding: 0 1.7rem;
+}
+.header__brands h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #FBFAF9;
+}
+.header__input {
+  display: flex;
+  align-items: center;
+  width: 48.9rem;
+  height: 4.2rem;
+  background: #fff;
+  overflow: hidden;
+}
+.header__input input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 1.5rem;
+  margin: 0;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #536067;
+}
+.header__input button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.2rem;
+  height: 4.2rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+.header__input button img {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+}
+.header__log-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15.3rem;
+  height: 4.2rem;
+  background: #F1F8FF;
+  gap: 2.5rem;
+  margin-right: 2rem;
+  flex: 0 0 auto;
+}
+.header__log-bar img {
+  width: 2.5rem;
+  height: 1.9rem;
+  object-fit: contain;
+}
+.header__log-bar button {
+  width: 1.9rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+.header__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+.header__modal-content {
+  box-shadow: -20px 0 30px rgba(43, 123, 198, 0.15), 20px 0 30px rgba(43, 123, 198, 0.15);
+  background: #fff;
+  position: relative;
+  width: 30rem;
+  height: 20rem;
+  border-radius: 2rem;
+}
+.header__modal-content button {
+  margin-bottom: 5rem;
+}
+.header__modal.active {
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  justify-content: center;
+}
+.header__modal-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 6rem;
+}
+.header__modal-input input {
+  width: 15rem;
+  height: 2.7rem;
+  border-radius: 0.6rem;
+  padding: 0 1rem;
+}
+.header__close-btn {
+  position: absolute;
+  top: 1rem;
+  color: #2B7BC6;
+  font-size: 1.5rem;
+  font-family: open-sans, sans-serif;
+  left: 27rem;
+  transition: 0.3s ease;
+}
+.header__close-btn:hover {
+  color: #1F5F9A;
+  text-decoration: none;
+  cursor: pointer;
+}
+.header__enter-btn {
+  position: absolute;
+  top: 15rem;
+  color: #ffffff;
+  font-size: 1.3rem;
+  background-color: #2B7BC6;
+  left: 11.5rem;
+  width: 7rem;
+  border-radius: 0.6rem;
+  height: 3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  width: 1920px;
+  height: 370px;
+  opacity: 1;
+  z-index: 0;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/*# sourceMappingURL=main.css.map */
